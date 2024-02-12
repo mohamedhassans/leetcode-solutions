@@ -1,6 +1,6 @@
 class Solution {
 public:
-   vector<int> smallestRange(vector<vector<int>>& nums) {
+  vector<int> smallestRange(vector<vector<int>>& nums) {
     map<int, int> m;
     multiset<int> s;
     set<pair<int, int>> st;
@@ -13,7 +13,7 @@ public:
     vector<int> ans;
 
 
-    while(st.size()!=0){
+    while(st.size()){
         auto it = st.begin();
         int x = it->first;
         int sec = it->second;
@@ -35,4 +35,5 @@ public:
     }
     return ans;
 }
+
 };
